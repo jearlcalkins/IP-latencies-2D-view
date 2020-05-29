@@ -14,10 +14,10 @@ the application will read a ping latency file, with sequential IP addresses, and
 /20 4096 IPs - 256x256  
 /18 16384 IPs - 1024x1024  
 /16 65536 IPs - 4096x4096  
-/14 262144 IPs - 16384x16384  
-/12 1048576 IPs - 65536x65536  
-
+/14 262144 IPs - 16384x16384   
 ...
+
+I don't know how the application and matplotlib will perform on larger subnets, like a /8.  
 
 
 
@@ -69,16 +69,6 @@ pip install pandas
 pip install scapy
 pip install matplotlib
 pip install ipaddress
-```
-
-##### needed updates to this code???:
-1) change the #! line, the first line of bigping.py, to use your server's python location.
-
-##### a test of tcpdump
-You should be able to execute the following tcpdump command as root or sudo, or the application will not work:
-
-```
-tcpdump -i eth0 -U -n icmp -w myfav.pcap
 ```
     
 ##### recovering ping result times via tcpdump
