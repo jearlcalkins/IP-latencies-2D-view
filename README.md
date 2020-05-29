@@ -76,6 +76,8 @@ python mapIP2XY.py -f 188.114.96.0-20-1590469441.txt
 ```
 this will create a single 188.114.96.0-20-1590469441.png, from the file (-f) 188.114.96.0-20-1590469441.txt, in the directory it is run from.  the file naming convention is adhered to, as the ultimate GIF animation, will be built, in ping text file creation order.  
 
+![a png file](https://github.com/jearlcalkins/IP-latencies-2D-view/blob/master/188.114.96.0-20-1590469441.png)
+
 ##### make_png.py application creates a single gif animation, from a glob of csv ping files
 from the directory holding the csv txt files:  
 
