@@ -4,14 +4,14 @@ create GIF animation, for a block of IP latencies, in 2 Dimensions, using a frac
 ##### run environment:
 AWS AMI linux on t2.micro  
 tcpdump installed  
-imaging Pillow environment installed
+imaging Pillow environment installed  
 sudo or root access  
-python 3.6 with these modules: PIL, math, matplotlib, numpy,  ipaddress, argparse, sys, re, time, datetime, subprocess, glob, os 
+python 3.6 with these modules: PIL, math, matplotlib, numpy,  ipaddress, argparse, sys, re, time, datetime, subprocess, glob, os  
 ethernet interface: eth0  
 other linux or bsd unix's may use a different interface name. if so, the hardcoded tcpdump call, will need to be changed.  
 
 ##### rough install directions #####
-be careful, getting your python3 environment setup, and there is a successful corresponding pip3 install.  the pip commands below are assuming the pip --version corresponds to your python36 version.  v
+Be careful, getting your python3 environment setup, and there is a successful corresponding pip3 install.  The pip commands below are assuming the pip --version corresponds to your python36 version.
 
 ```
 sudo yum update -y
@@ -45,7 +45,7 @@ This application will read a ping latency file, with sequential IP addresses, an
 /14 262144 IPs - 16384x16384   
 ...
 
-I don't know how-well the application and matplotlib will perform on larger subnet ping datasets, like a /8.  
+I don't know how-well the application and matplotlib module will perform on larger subnet ping datasets, like a /8.  
 
 The following is a snippet, from a raw CSV ping stat dataset
 
@@ -63,11 +63,10 @@ Adhering to the csv ping latency file naming convention is necessary, if one wis
 
 mapIP2XY.py will open a ping latency file, with an IPv4 and cidr "size" naming format  
 file: 188.114.96.0-20-1590469441.txt where  
-188.114.96.0 is the base "network address" and
-24 is a cidr size
+188.114.96.0 is the base "network address" and  24 is a cidr size  
 the cidr address would be written as:  192.168.0.0/24  
-in this example, /24 indicates the file will hold 256 ping records
-1590031803 is the ping snapshot's start, timestamp in linux epoch UTC time
+in this example, /24 indicates the file will hold 256 ping records  
+1590031803 is the ping snapshot's start, timestamp in linux epoch UTC time  
 
 ##### How-to run mapIP2XY.py and create a single png heatmap, from a csv png file:  
 
@@ -75,7 +74,7 @@ in this example, /24 indicates the file will hold 256 ping records
 python mapIP2XY.py -f 188.114.96.0-20-1590469441.txt
 ```  
 
-This will create the following, single 188.114.96.0-20-1590469441.png, from the file (-f) 188.114.96.0-20-1590469441.txt, in the directory it is run from.  The file naming convention is adhered to, as the ultimate GIF animation, will be built, in ping text file creation order.  
+The above command will create the following, single 188.114.96.0-20-1590469441.png, from the file (-f) 188.114.96.0-20-1590469441.txt, in the directory it is run from.  The file naming convention is adhered to, as the ultimate GIF animation, will be built, in ping text file creation order.  
 
 ![a png file](https://github.com/jearlcalkins/IP-latencies-2D-view/blob/master/188.114.96.0-20-1590469441.png)
 
