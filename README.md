@@ -73,8 +73,9 @@ in this example, /24 indicates the file will hold 256 ping records
 
 ```
 python mapIP2XY.py -f 188.114.96.0-20-1590469441.txt
-```
-this will create a single 188.114.96.0-20-1590469441.png, from the file (-f) 188.114.96.0-20-1590469441.txt, in the directory it is run from.  the file naming convention is adhered to, as the ultimate GIF animation, will be built, in ping text file creation order.  
+```  
+
+This will create the following, single 188.114.96.0-20-1590469441.png, from the file (-f) 188.114.96.0-20-1590469441.txt, in the directory it is run from.  The file naming convention is adhered to, as the ultimate GIF animation, will be built, in ping text file creation order.  
 
 ![a png file](https://github.com/jearlcalkins/IP-latencies-2D-view/blob/master/188.114.96.0-20-1590469441.png)
 
@@ -85,8 +86,8 @@ from the directory holding the csv txt files:
 python make_png.py -p 188.114.96.0-20-
 ```
 
-The application will glob the txt csv ping files, creating a png heatmap file for each timestamp.  the application will then, create a gif animation from all the png snapshots.
+The application will glob the txt csv ping files, creating a png heatmap file for each timestamp.  the application will then, create a gif animation from all the png snapshots.  
 
+This gif file was created from 82 hourly, csv ping latency files.  
 
-
-
+![a gif file](https://github.com/jearlcalkins/IP-latencies-2D-view/blob/master/188.114.96.0-20.gif)
